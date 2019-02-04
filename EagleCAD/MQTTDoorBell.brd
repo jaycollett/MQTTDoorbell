@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.0">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -174,10 +174,10 @@
 <text x="6.5" y="2.4" size="0.8128" layer="21" rot="R90">BO2</text>
 <text x="6.6" y="12.9" size="0.8128" layer="21" rot="R90">AC1</text>
 <text x="6.6" y="9.4" size="0.8128" layer="21" rot="R90">AC2</text>
-<text x="77" y="25" size="1.016" layer="22" rot="MR0">www.jaycollett.com</text>
-<text x="77" y="23" size="1.016" layer="22" rot="MR0">MQTT DoorBell</text>
-<text x="77" y="21" size="1.016" layer="22" rot="MR0">v1.0</text>
-<text x="77" y="19" size="1.016" layer="22" rot="MR0">1/22/2019</text>
+<text x="77" y="25" size="1.27" layer="22" rot="MR0">www.jaycollett.com</text>
+<text x="77.2" y="22.9" size="1.27" layer="22" rot="MR0">MQTT DoorBell</text>
+<text x="77" y="21" size="1.27" layer="22" rot="MR0">v1.4</text>
+<text x="77" y="18.6" size="1.27" layer="22" rot="MR0">2/3/2019</text>
 </plain>
 <libraries>
 <library name="JayCollett">
@@ -1772,82 +1772,82 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </pass>
 </autorouter>
 <elements>
-<element name="BR1" library="JayCollett" package="MICRO-DIP" value="MDB6S" x="5" y="21" rot="R180">
+<element name="BR1" library="JayCollett" package="MICRO-DIP" value="MDB6S" x="5" y="21" smashed="yes" rot="R180">
 <attribute name="NAME" x="7.85" y="20.4" size="0.6096" layer="25" rot="R270"/>
 </element>
-<element name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="M0805" value="10k" x="59" y="6" rot="R180">
+<element name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="M0805" value="10k" x="59" y="6" smashed="yes" rot="R180">
 <attribute name="NAME" x="61.016" y="4.584" size="1.27" layer="25" rot="R180"/>
 </element>
-<element name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="M0805" value="10k" x="64" y="6" rot="R180">
+<element name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="M0805" value="10k" x="64" y="6" smashed="yes" rot="R180">
 <attribute name="NAME" x="68.416" y="6.484" size="1.27" layer="25" rot="R180"/>
 </element>
-<element name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="M0805" value="10k" x="54" y="6">
+<element name="R3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="M0805" value="10k" x="54" y="6" smashed="yes">
 <attribute name="NAME" x="53.984" y="3.516" size="1.27" layer="25"/>
 </element>
-<element name="X1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="ESP-12" package3d_urn="urn:adsk.eagle:package:6240951/1" value="" x="65" y="17" rot="R270">
+<element name="X1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="ESP-12" package3d_urn="urn:adsk.eagle:package:6240951/1" value="" x="65" y="17" smashed="yes" rot="R270">
 <attribute name="VALUE" x="53" y="12.5" size="1.4224" layer="27" font="vector" ratio="12" rot="R270" align="center"/>
 </element>
-<element name="U$1" library="microbuilder" package="RELAY_G5LE-1" value="RELAY_G5LE" x="19.32" y="9.144" rot="R180">
+<element name="U$1" library="microbuilder" package="RELAY_G5LE-1" value="RELAY_G5LE" x="19.32" y="9.144" smashed="yes" rot="R180">
 <attribute name="SPICEPREFIX" value="B" x="19.32" y="9.144" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="Q1" library="microbuilder" package="SOT23-R" value="MMBT2222" x="37" y="9" rot="R90">
+<element name="Q1" library="microbuilder" package="SOT23-R" value="MMBT2222" x="37" y="9" smashed="yes" rot="R90">
 <attribute name="NAME" x="37.622" y="6.927" size="0.8128" layer="25" ratio="18" rot="R180"/>
 </element>
-<element name="R4" library="microbuilder" package="0805-NO" value="1K" x="44" y="11" rot="R270">
+<element name="R4" library="microbuilder" package="0805-NO" value="1K" x="44" y="11" smashed="yes" rot="R270">
 <attribute name="NAME" x="45" y="10" size="0.8128" layer="25" ratio="18" rot="R270"/>
 </element>
-<element name="D1" library="microbuilder" package="SOD-323" value="1N4148" x="33" y="9" rot="R270">
+<element name="D1" library="microbuilder" package="SOD-323" value="1N4148" x="33" y="9" smashed="yes" rot="R270">
 <attribute name="NAME" x="34.2" y="9.7" size="0.8128" layer="25" ratio="18" rot="R270"/>
 </element>
-<element name="R5" library="microbuilder" package="0805-NO" value="10K" x="41" y="11" rot="R270">
+<element name="R5" library="microbuilder" package="0805-NO" value="10K" x="41" y="11" smashed="yes" rot="R270">
 <attribute name="NAME" x="42" y="10" size="0.8128" layer="25" ratio="18" rot="R270"/>
 </element>
-<element name="C2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value="10uF" x="13" y="22" rot="R90">
+<element name="C2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value="10uF" x="13" y="22" smashed="yes" rot="R90">
 <attribute name="NAME" x="13" y="24.711" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11330" x="13" y="22" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value=".1uF" x="52" y="14" rot="R270">
+<element name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value=".1uF" x="52" y="14" smashed="yes" rot="R270">
 <attribute name="NAME" x="52.1" y="11.789" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11330" x="52" y="14" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value=".1uF" x="10" y="22" rot="R90">
+<element name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value=".1uF" x="10" y="22" smashed="yes" rot="R90">
 <attribute name="NAME" x="10" y="24.711" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11330" x="10" y="22" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value="10uf" x="43" y="15" rot="R180">
+<element name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" package="0805" package3d_urn="urn:adsk.eagle:package:37429/1" value="10uf" x="43" y="15" smashed="yes" rot="R180">
 <attribute name="NAME" x="43" y="13.911" size="0.6096" layer="25" font="vector" ratio="20" rot="R180" align="bottom-center"/>
 <attribute name="PROD_ID" value="CAP-11330" x="43" y="15" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="PROG" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X05" package3d_urn="urn:adsk.eagle:package:38104/1" value="" x="65" y="2">
+<element name="PROG" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X05" package3d_urn="urn:adsk.eagle:package:38104/1" value="" x="65" y="2" smashed="yes">
 <attribute name="NAME" x="63.303" y="0.73" size="0.8128" layer="25" font="vector" ratio="20" rot="R90"/>
 <attribute name="VALUE" x="63.73" y="-0.032" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
-<element name="R6" library="microbuilder" package="0805-NO" value="2K" x="50" y="9">
+<element name="R6" library="microbuilder" package="0805-NO" value="2K" x="50" y="9" smashed="yes">
 <attribute name="NAME" x="52.032" y="8.873" size="0.8128" layer="25" ratio="18"/>
 </element>
-<element name="C7" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="E5-10,5" package3d_urn="urn:adsk.eagle:package:6240521/1" value="" x="34" y="21" rot="R90">
+<element name="C7" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="E5-10,5" package3d_urn="urn:adsk.eagle:package:6240521/1" value="" x="34" y="21" smashed="yes" rot="R90">
 <attribute name="NAME" x="31.2568" y="19.699" size="1.27" layer="25" ratio="10" rot="R90"/>
 <attribute name="VALUE" x="37.2258" y="17.8758" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="U1" library="Traco_TSR" package="TSR-1" value="TSR_1-2433" x="22.1" y="20.4"/>
-<element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="SCREWTERMINAL-3.5MM-2" package3d_urn="urn:adsk.eagle:package:38050/1" value="" x="42" y="4">
+<element name="U1" library="Traco_TSR" package="TSR-1" value="TSR_1-2433" x="22.1" y="20.4" smashed="yes"/>
+<element name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="SCREWTERMINAL-3.5MM-2" package3d_urn="urn:adsk.eagle:package:38050/1" value="" x="42" y="4" smashed="yes">
 <attribute name="PROD_ID" value="CONN-08399" x="42" y="4" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="40.73" y="5.27" size="0.6096" layer="27" font="vector" ratio="20"/>
 </element>
-<element name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="SCREWTERMINAL-3.5MM-4" package3d_urn="urn:adsk.eagle:package:38090/1" value="" x="4" y="14" rot="R270">
+<element name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="SCREWTERMINAL-3.5MM-4" package3d_urn="urn:adsk.eagle:package:38090/1" value="" x="4" y="14" smashed="yes" rot="R270">
 <attribute name="PROD_ID" value="2xCONN-08399" x="4" y="14" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SF_ID" value="2xPRT-08084" x="4" y="14" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="1.714" y="14" size="0.6096" layer="27" font="vector" ratio="20" rot="R270"/>
 </element>
-<element name="R7" library="microbuilder" package="0805-NO" value="2K" x="46" y="18">
+<element name="R7" library="microbuilder" package="0805-NO" value="2K" x="46" y="18" smashed="yes">
 <attribute name="NAME" x="48.032" y="17.873" size="0.8128" layer="25" ratio="18"/>
 </element>
-<element name="SW2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="EVQ-Q2" package3d_urn="urn:adsk.eagle:package:6240643/1" value="SPST_TACT-EVQQ2" x="45" y="22">
+<element name="SW2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="EVQ-Q2" package3d_urn="urn:adsk.eagle:package:6240643/1" value="SPST_TACT-EVQQ2" x="45" y="22" smashed="yes">
 <attribute name="NAME" x="43.1" y="25.3" size="1.27" layer="25"/>
 </element>
-<element name="LOGO1" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" package="OSHW-LOGO-MINI" package3d_urn="urn:adsk.eagle:package:37101/1" value="OSHW-LOGOMINI" x="75" y="6"/>
-<element name="LOGO2" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" package="ROHS_LOGO_0.18_IN" package3d_urn="urn:adsk.eagle:package:37159/1" value="ROHS_LOGO" x="77" y="4" rot="MR0"/>
-<element name="U$4" library="microbuilder" package="MICROBUILDER_MOUNTINGHOLE_3.0_PLATEDTHIN" value="MICROBUILDER_MOUNTINGHOLE3.0THIN" x="35" y="3"/>
+<element name="LOGO1" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" package="OSHW-LOGO-MINI" package3d_urn="urn:adsk.eagle:package:37101/1" value="OSHW-LOGOMINI" x="75" y="6" smashed="yes"/>
+<element name="LOGO2" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" package="ROHS_LOGO_0.18_IN" package3d_urn="urn:adsk.eagle:package:37159/1" value="ROHS_LOGO" x="77" y="4" smashed="yes" rot="MR0"/>
+<element name="U$4" library="microbuilder" package="MICROBUILDER_MOUNTINGHOLE_3.0_PLATEDTHIN" value="MICROBUILDER_MOUNTINGHOLE3.0THIN" x="35" y="3" smashed="yes"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2117,12 +2117,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="X1" pad="4"/>
 </signal>
 <signal name="BELL_OUT2" class="2">
-<contactref element="U$1" pad="4"/>
 <contactref element="J3" pad="4"/>
-<wire x1="12.8778" y1="3.429" x2="4.0386" y2="3.429" width="0.6096" layer="1"/>
-<wire x1="13.4112" y1="2.8956" x2="12.8778" y2="3.429" width="0.6096" layer="1"/>
 <wire x1="4.0386" y1="3.429" x2="4" y2="3.5" width="0.6096" layer="1"/>
-<wire x1="13.4112" y1="2.8956" x2="13.47" y2="2.894" width="0.6096" layer="1"/>
+<contactref element="U$1" pad="3"/>
+<wire x1="13.47" y1="14.894" x2="13.47" y2="12.97" width="0.6096" layer="16"/>
+<wire x1="13.47" y1="12.97" x2="4" y2="3.5" width="0.6096" layer="16"/>
 </signal>
 <signal name="16V_AC1" class="2">
 <contactref element="BR1" pad="AC2"/>

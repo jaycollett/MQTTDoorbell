@@ -1,19 +1,33 @@
+/**********************************************************************************************
+  MQTT Doorbell Module
+  Written by: Jay Collett jay.collett AT gmail.com
+  Description: This sketch is for my custom PCB which allows for a much smarter
+               doorbell without the need for the expensive (and ugly) smart
+               doorbells with cameras and such. Simple, and so much cheaper than
+               those other "smart" doorbells. You can find more information out
+               about this project here:
+               https://www.jaycollett.com/2019/02/a-smarter-doorbell-without-all-the-extras/
+  Sketch includes unmodified code libraries from the following awesome sources:
+      PubSubClient  https://github.com/knolleary/pubsubclient
+      ESP8266WiFi   https://github.com/esp8266/Arduino
+
+  This work (excluding external modules/libraries) is licensed under CC BY-SA 4.0
+ ***********************************************************************************************/
+
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-
-
 #define doorbellButtonSensePin 4
 
-#define WIFI_SSID "xxxxxxxxxxxxxx"
-#define WIFI_PASS "xxxxxxxxxxxx"
+#define WIFI_SSID "xxxxxxxxx"
+#define WIFI_PASS "xxxxxxxxxxxxxx"
 #define MQTT_PORT 1883
 
 int   wifiRetryCount = 0;
 char  fmversion[7] = "v1.4";                  // firmware version of this sensor
 char  mqtt_server[] = "192.168.0.x";          // MQTT broker IP address
-char  mqtt_username[] = "xxxxxxxxxxxxxxx";    // username for MQTT broker (USE ONE)
-char  mqtt_password[] = "xxxxxxxxxxxxx";      // password for MQTT broker
+char  mqtt_username[] = "doorbellsensor";     // username for MQTT broker (USE ONE)
+char  mqtt_password[] = "xxxxxxxxxxxxxxx";    // password for MQTT broker
 char  mqtt_clientid[] = "doorbellSensor";     // client id for connections to MQTT broker
 
 const String HOSTNAME = "doorbellSensor";
@@ -37,7 +51,7 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED) {
     delay(250);
     Serial.print(".");
-    if(wifiRetryCount >= 14){ // 250mS delay x 15 iterations = 60 seconds
+    if(wifiRetryCount >= 120){ // 250mS delay x 120 iterations = 30 seconds
       ESP.restart();
     }
     wifiRetryCount++;
@@ -61,10 +75,10 @@ void loop() {
 
   
   // loop indefinitely, checking to see if someone has hit the doorbell button
-  // doorbell sense pin will go LOW if the doorbell button is being pushed
-  if(digitalRead(doorbellButtonSensePin) == LOW){
+  // doorbell sense pin will go HIGH if the doorbell button is being pushed
+  if(digitalRead(doorbellButtonSensePin) == HIGH){
     delay(100); // poor man's debounce
-     if(digitalRead(doorbellButtonSensePin) == LOW){
+     if(digitalRead(doorbellButtonSensePin) == HIGH){
       mqttclient.publish(topic.c_str(), "ON");
       Serial.println("Somone hit the doorbell, tell the MQTT server...");
       delay(2000); // give time for the payload to register, and prevent silly doorbell mashers from iratating me further...
@@ -78,7 +92,7 @@ void loop() {
     while(WiFi.status() != WL_CONNECTED){
       delay(250);
       Serial.print(".");
-      if(wifiRetryCount >= 14){ // 250mS delay x 15 iterations = 60 seconds
+      if(wifiRetryCount >= 120){ // 250mS delay x 120 iterations = 30 seconds
       ESP.restart();
     }
     wifiRetryCount++;

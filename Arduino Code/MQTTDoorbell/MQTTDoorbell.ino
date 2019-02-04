@@ -9,6 +9,7 @@
 #define WIFI_PASS "xxxxxxxxxxxx"
 #define MQTT_PORT 1883
 
+int   wifiRetryCount = 0;
 char  fmversion[7] = "v1.4";                  // firmware version of this sensor
 char  mqtt_server[] = "192.168.0.x";          // MQTT broker IP address
 char  mqtt_username[] = "xxxxxxxxxxxxxxx";    // username for MQTT broker (USE ONE)
@@ -36,7 +37,13 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED) {
     delay(250);
     Serial.print(".");
+    if(wifiRetryCount >= 14){ // 250mS delay x 15 iterations = 60 seconds
+      ESP.restart();
+    }
+    wifiRetryCount++;
   }
+
+  wifiRetryCount = 0;
   
   Serial.println("");
   Serial.println("WiFi connected");
@@ -64,6 +71,23 @@ void loop() {
       mqttclient.publish(topic.c_str(), "OFF");
      }
   }
+
+  if(WiFi.status() != WL_CONNECTED){
+    Serial.println("Wifi connection was lost...attempting reconnect.");
+    WiFi.begin(WIFI_SSID, WIFI_PASS);
+    while(WiFi.status() != WL_CONNECTED){
+      delay(250);
+      Serial.print(".");
+      if(wifiRetryCount >= 14){ // 250mS delay x 15 iterations = 60 seconds
+      ESP.restart();
+    }
+    wifiRetryCount++;
+    }
+    wifiRetryCount = 0;
+  }
+
+  // call this routine each loop
+  MQTT_connect();
 }
 
 

@@ -54,6 +54,7 @@ void loop() {
 
   
   // loop indefinitely, checking to see if someone has hit the doorbell button
+  // doorbell sense pin will go LOW if the doorbell button is being pushed
   if(digitalRead(doorbellButtonSensePin) == LOW){
     delay(100); // poor man's debounce
      if(digitalRead(doorbellButtonSensePin) == LOW){

@@ -20352,11 +20352,6 @@ ROHS_LOGO</description>
 <label x="109.22" y="139.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="P"/>
-<wire x1="175.26" y1="91.44" x2="160.02" y2="91.44" width="0.1524" layer="91"/>
-<label x="160.02" y="92.456" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="J3" gate="G$1" pin="2"/>
 <wire x1="48.26" y1="170.18" x2="30.48" y2="170.18" width="0.1524" layer="91"/>
 <label x="30.48" y="170.18" size="1.778" layer="95"/>
@@ -20396,6 +20391,11 @@ ROHS_LOGO</description>
 <pinref part="J3" gate="G$1" pin="1"/>
 <wire x1="48.26" y1="172.72" x2="30.48" y2="172.72" width="0.1524" layer="91"/>
 <label x="30.48" y="172.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="P"/>
+<wire x1="175.26" y1="91.44" x2="160.02" y2="91.44" width="0.1524" layer="91"/>
+<label x="160.02" y="92.456" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">

@@ -176,8 +176,8 @@
 <text x="6.6" y="9.4" size="0.8128" layer="21" rot="R90">AC2</text>
 <text x="77" y="25" size="1.27" layer="22" rot="MR0">www.jaycollett.com</text>
 <text x="77.2" y="22.9" size="1.27" layer="22" rot="MR0">MQTT DoorBell</text>
-<text x="77" y="21" size="1.27" layer="22" rot="MR0">v1.4</text>
-<text x="77" y="18.6" size="1.27" layer="22" rot="MR0">2/3/2019</text>
+<text x="77" y="21" size="1.27" layer="22" rot="MR0">v1.5</text>
+<text x="77" y="18.6" size="1.27" layer="22" rot="MR0">2/17/2019</text>
 </plain>
 <libraries>
 <library name="JayCollett">
@@ -2099,7 +2099,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 </signal>
 <signal name="16V_AC2" class="2">
 <contactref element="BR1" pad="AC1"/>
-<contactref element="U$1" pad="1"/>
 <contactref element="J3" pad="2"/>
 <contactref element="J3" pad="3"/>
 <wire x1="6.9342" y1="13.4112" x2="6.9342" y2="17.9832" width="0.6096" layer="1"/>
@@ -2109,9 +2108,6 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="4.0386" y1="10.2108" x2="4.0386" y2="7.0104" width="0.6096" layer="1"/>
 <wire x1="4.0386" y1="7.0104" x2="4" y2="7" width="0.6096" layer="1"/>
 <wire x1="4.0386" y1="10.2108" x2="4" y2="10.5" width="0.6096" layer="1"/>
-<wire x1="11.2776" y1="9.144" x2="27.67" y2="9.144" width="0.6096" layer="1"/>
-<wire x1="7.1628" y1="13.2588" x2="11.2776" y2="9.144" width="0.6096" layer="1"/>
-<wire x1="7.1628" y1="13.2588" x2="6.9342" y2="13.4112" width="0.6096" layer="1"/>
 </signal>
 <signal name="BUTTON1">
 <contactref element="X1" pad="4"/>
@@ -2120,8 +2116,8 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="J3" pad="4"/>
 <wire x1="4.0386" y1="3.429" x2="4" y2="3.5" width="0.6096" layer="1"/>
 <contactref element="U$1" pad="3"/>
-<wire x1="13.47" y1="14.894" x2="13.47" y2="12.97" width="0.6096" layer="16"/>
-<wire x1="13.47" y1="12.97" x2="4" y2="3.5" width="0.6096" layer="16"/>
+<wire x1="13.47" y1="14.894" x2="13.47" y2="12.8604" width="0.6096" layer="1"/>
+<wire x1="13.47" y1="12.8604" x2="4.0386" y2="3.429" width="0.6096" layer="1"/>
 </signal>
 <signal name="16V_AC1" class="2">
 <contactref element="BR1" pad="AC2"/>
@@ -2130,6 +2126,11 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="3.9624" y1="14.0208" x2="3.048" y2="14.9352" width="0.6096" layer="1"/>
 <wire x1="3.048" y1="17.9832" x2="3" y2="18.05" width="0.6096" layer="1"/>
 <wire x1="3.9624" y1="14.0208" x2="4" y2="14" width="0.6096" layer="1"/>
+<contactref element="U$1" pad="1"/>
+<wire x1="4" y1="14" x2="7" y2="14" width="0.6096" layer="16"/>
+<wire x1="7" y1="14" x2="12" y2="9" width="0.6096" layer="16"/>
+<wire x1="12" y1="9" x2="27.526" y2="9" width="0.6096" layer="16"/>
+<wire x1="27.526" y1="9" x2="27.67" y2="9.144" width="0.6096" layer="16"/>
 </signal>
 <signal name="N$4">
 <contactref element="Q1" pad="3"/>

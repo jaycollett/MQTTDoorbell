@@ -19,15 +19,15 @@
 
 #define doorbellButtonSensePin 4
 
-#define WIFI_SSID "GoofWiFi"
-#define WIFI_PASS "Gabriel01!"
+#define WIFI_SSID "xxxxxxxx"
+#define WIFI_PASS xxxxxxxxx"
 #define MQTT_PORT 1883
 
 int   wifiRetryCount = 0;
 char  fmversion[7] = "v1.4";                  // firmware version of this sensor
-char  mqtt_server[] = "192.168.0.5";          // MQTT broker IP address
+char  mqtt_server[] = "192.168.0.x";          // MQTT broker IP address
 char  mqtt_username[] = "doorbellsensor";     // username for MQTT broker (USE ONE)
-char  mqtt_password[] = "door_1_bell_pw!";    // password for MQTT broker
+char  mqtt_password[] = "xxxxxxxxxxxxxxx";    // password for MQTT broker
 char  mqtt_clientid[] = "doorbellSensor";     // client id for connections to MQTT broker
 
 const String HOSTNAME = "doorbellSensor";

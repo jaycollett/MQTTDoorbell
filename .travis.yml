@@ -1,0 +1,25 @@
+language: python
+
+cache:
+  directories:
+  - "~/.platformio"
+
+install:
+- pip install -U platformio
+- platformio update
+- platformio lib -g install 1
+
+env:
+- BOARD=esp12e
+
+script:
+  - "echo $PWD"
+  - "echo $HOME"
+  - pio lib install https://github.com/jaycollett/MQTTDoorbell.git
+  - pio lib install "PubSubClient"
+  - platformio ci --board=$BOARD --lib=$PWD/ArduinoCode $PWD/ArduinoCode/MQTTDoorbell/MQTTDoorbell.ino
+  
+notifications:
+  email:
+    on_success: change
+    on_failure: change

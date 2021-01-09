@@ -33,9 +33,6 @@ char  mqtt_clientid[] = "doorbellSensor";     // client id for connections to MQ
 const String HOSTNAME = "doorbellSensor";
 const String topic = "binarySensor/doorbell";
 
-// Callback function header
-void callback(char* topic, byte* payload, unsigned int length);
-
 IPAddress ip;
 WiFiClient WiFiClient;
 PubSubClient mqttclient(WiFiClient);
@@ -139,14 +136,4 @@ void MQTT_connect() {
     }
   }
   Serial.println("MQTT Connected!");
-}
-
-void callback(char* topic, byte* payload, unsigned int length) {
-  Serial.print("Message arrived [");
-  Serial.print(topic);
-  Serial.print("] ");
-  for (int i=0;i<length;i++) {
-    Serial.print((char)payload[i]);
-  }
-  Serial.println();
 }

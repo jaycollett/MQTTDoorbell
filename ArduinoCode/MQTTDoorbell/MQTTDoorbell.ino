@@ -11,7 +11,7 @@
       PubSubClient  https://github.com/knolleary/pubsubclient
       ESP8266WiFi   https://github.com/esp8266/Arduino
 
-  This work (excluding external modules/libraries) is licensed under CC BY-SA 4.0
+  This work (excluding external modules/libraries) is licensed under MIT
  ***********************************************************************************************/
 
 #include <ESP8266WiFi.h>

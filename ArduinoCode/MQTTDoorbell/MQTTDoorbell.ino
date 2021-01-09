@@ -20,7 +20,7 @@
 #define doorbellButtonSensePin 4
 
 #define WIFI_SSID "xxxxxxxx"
-#define WIFI_PASS xxxxxxxxx"
+#define WIFI_PASS "xxxxxxxxx"
 #define MQTT_PORT 1883
 
 int   wifiRetryCount = 0;
